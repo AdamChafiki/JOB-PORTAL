@@ -1,0 +1,14 @@
+<div class="flex min-h-screen">
+  <!-- side bar -->
+  <aside class="w-1/5 hidden md:block  border border-red-100">
+    <app-side-bar></app-side-bar>
+  </aside>
+  <!-- main  -->
+  <main class="w-4/3  w-full">
+    <!--  header   -->
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<!--footer-->
+<app-footer></app-footer>
