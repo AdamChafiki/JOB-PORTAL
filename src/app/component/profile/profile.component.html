@@ -11,8 +11,7 @@
   <div class="info bg-white border p-2 mx-2 rounded-lg">
     <!--  Button modal    -->
     <div class="flex justify-end mb-2">
-
-      <button class="btn btn-primary btn-md" onclick="my_modal_1.showModal()">
+      <button class="btn btn-primary btn-md" onclick="editProfileModal.showModal()">
         Edit
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -25,17 +24,38 @@
       </button>
     </div>
     <!--  modal   -->
-    <dialog id="my_modal_1" class="modal">
+    <app-modal [id]="'editProfileModal'">
       <div class="modal-box">
         <h3 class="text-lg font-bold">Edit Profile</h3>
-        <p class="py-4">USERNAME</p>
+        <form class="space-y-4 p-4">
+          <label class="input input-bordered flex items-center gap-2">
+            <span>Name:</span>
+            <input type="text" class="grow input" placeholder="Your phone name" required/>
+          </label>
+
+          <label class="input input-bordered flex items-center gap-2">
+            <span>Email:</span>
+            <input type="email" class="grow input" placeholder="Your email" required/>
+          </label>
+
+          <label class="input input-bordered flex items-center gap-2">
+            <span>Phone:</span>
+            <input type="tel" class="grow input" placeholder="Your phone number" required/>
+          </label>
+
+          <label class="input input-bordered flex items-center gap-2">
+            <span>Resume:</span>
+            <input type="file" class="file-input   "/>
+          </label>
+        </form>
         <div class="modal-action">
-          <form method="dialog">
+          <form method="dialog" class="flex space-x-3">
+            <button class="btn btn-primary">Save</button>
             <button class="btn">Close</button>
           </form>
         </div>
       </div>
-    </dialog>
+    </app-modal>
     <div class="flex">
       <!--  info    -->
       <ul class="menu menu-lg bg-base-200 rounded-box w-96 mx-2">
@@ -124,6 +144,7 @@
               <path d="M18 15l-6 6-6-6"></path>
             </svg>
           </th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -133,6 +154,15 @@
           <td>Quality Assurance</td>
           <td>Acme Corp</td>
           <td>2024-11-02</td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+              <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
         </tr>
         <!-- row 2 -->
         <tr>
@@ -140,6 +170,15 @@
           <td>IT Support</td>
           <td>Tech Solutions</td>
           <td>2024-10-29</td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+              <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
         </tr>
         <!-- row 3 -->
         <tr>
@@ -147,6 +186,15 @@
           <td>Finance</td>
           <td>Financial Services</td>
           <td>2024-10-15</td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/>
+              <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
         </tr>
         </tbody>
       </table>

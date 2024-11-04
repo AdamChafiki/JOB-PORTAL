@@ -3,6 +3,8 @@ import {MainLayoutComponent} from './layout/main-layout/main-layout.component';
 import {HomeComponent} from './component/home/home.component';
 import {JobComponent} from './component/job/job.component';
 import {ProfileComponent} from './component/profile/profile.component';
+import {LoginComponent} from './component/login/login.component';
+import {AuthGuard} from './service/auth-guard.service';
 
 
 export const routes: Routes = [
@@ -20,7 +22,12 @@ export const routes: Routes = [
       },
       {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'login',
+        component: LoginComponent
       }
     ],
   },
