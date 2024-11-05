@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from '@angular/router';
-import {AuthService} from '../../service/auth.service';
+import { AuthService } from '../../core/service/auth.service';
 
 @Component({
   selector: 'app-side-bar',

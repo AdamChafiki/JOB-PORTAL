@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { ModalComponent } from '../modal/modal.component';
+import { ModalComponent } from '../../shared/component/modal/modal.component';
 
 @Component({
   selector: 'app-profile',

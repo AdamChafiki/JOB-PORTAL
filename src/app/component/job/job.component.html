@@ -1,3 +1,5 @@
-<section>
-  Jobs
+<section class="p-4 grid grid-cols-2  md:grid-cols-3 gap-4">
+  @for(job of jobOffers; track job.id){
+    <app-job-card></app-job-card>
+  }
 </section>

@@ -4,7 +4,8 @@ import {HomeComponent} from './component/home/home.component';
 import {JobComponent} from './component/job/job.component';
 import {ProfileComponent} from './component/profile/profile.component';
 import {LoginComponent} from './component/login/login.component';
-import {AuthGuard} from './service/auth-guard.service';
+import { SavedJobComponent } from './component/saved-job/saved-job.component';
+import { AuthGuard } from './core/guards/auth-guard.service';
 
 
 export const routes: Routes = [
@@ -28,6 +29,11 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path:'saved-job',
+        component: SavedJobComponent,
+        canActivate: [AuthGuard]
       }
     ],
   },
