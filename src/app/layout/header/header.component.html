@@ -1,11 +1,11 @@
 <header class="flex justify-between border-b-2 p-2">
   @if(isJobPath()){
-      <div class="w-96 flex">
+      <div class="w-2/4 flex">
         <input type="text" placeholder="Search jobs..." class="input input-bordered w-full" />
         <button class="btn btn-error text-white ml-2">Search</button>
       </div>
   }
-  <div>
+  <div class="w-2/4  ml-auto  flex justify-end">
     @if  (checkIsAuth()) {
       <div class="dropdown dropdown-bottom dropdown-end">
         <div tabindex="0" role="button" class="m-1">
